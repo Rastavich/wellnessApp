@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">wellnessApp</string>
+    <string name="facebook_app_id">1063508047068331</string>
+    <string name="cancel_login">Login Cancelled!</string>
+    <string name="error_login">Login Error!</string>
 </resources>
