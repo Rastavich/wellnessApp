@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         LoginManager.getInstance().logOut();
         goLoginScreen();
     }
+
+
 
 
 }
