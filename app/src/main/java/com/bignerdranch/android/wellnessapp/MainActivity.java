@@ -1,10 +1,13 @@
 package com.bignerdranch.android.wellnessapp;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.hardware.Sensor;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.facebook.AccessToken;
 import com.facebook.appevents.AppEventsLogger;
@@ -14,7 +17,6 @@ import com.facebook.FacebookSdk;
 import static com.facebook.AccessToken.getCurrentAccessToken;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +39,5 @@ public class MainActivity extends AppCompatActivity {
         LoginManager.getInstance().logOut();
         goLoginScreen();
     }
-
-
-
-
 }
+

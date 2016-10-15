@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="top|start">
+
+    <fragment android:name="com.bignerdranch.android.wellnessapp.OptionFragment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/list"
+              tools:layout="@layout/fragment_option"/>
+
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center" >
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <Button
-            android:layout_width="134dp"
-            android:layout_height="59dp"
-            android:text="Measure Heart Rate"
-            android:id="@+id/heart_button"
-            />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View History"
-            android:id="@+id/history_button"
-            android:height="60dp"/>
-
-    </LinearLayout>
+        android:id="@+id/viewer"
+        android:name="com.bignerdranch.android.wellnessapp.OptionFragment"
+        tools:layout="@layout/fragment_option"/>
 
 </LinearLayout>
