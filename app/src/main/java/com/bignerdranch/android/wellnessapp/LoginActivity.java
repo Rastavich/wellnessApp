@@ -3,7 +3,6 @@ package com.bignerdranch.android.wellnessapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.view.ActionMode;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -24,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.fragment_viewer);
 
         callbackManager = CallbackManager.Factory.create();
 

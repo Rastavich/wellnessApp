@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_option);
 
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
