@@ -1,6 +1,6 @@
 package com.bignerdranch.android.wellnessapp;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -53,7 +53,7 @@ public class MainActivity extends FragmentActivity {
         Fragment newFragment;
 
         if(view == findViewById(R.id.history_button)) {
-            newFragment = new StartFragment;
+            newFragment = new HeartRateFragment();
         } else if (view == findViewById(R.id.heart_button)) {
             newFragment = new HeartRateFragment();
         } else if (view == findViewById(R.id.logout_button)) {
