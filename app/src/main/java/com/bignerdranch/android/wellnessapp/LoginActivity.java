@@ -25,10 +25,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private LoginButton loginButton;
     private CallbackManager callbackManager;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     private GoogleApiClient mClient;
 
     @Override
@@ -36,12 +32,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        setContentView(R.layout.fragment_viewer);
+        setContentView(R.layout.activity_login);
 
         callbackManager = CallbackManager.Factory.create();
 
 
-        loginButton = (LoginButton) findViewById(R.id.loginButton);
+        loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -76,10 +72,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Login Page") // TODO: Define a title for the content shown.
@@ -96,8 +88,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         mClient.connect();
         AppIndex.AppIndexApi.start(mClient, getIndexApiAction());
     }
@@ -106,8 +97,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         AppIndex.AppIndexApi.end(mClient, getIndexApiAction());
         mClient.disconnect();
     }

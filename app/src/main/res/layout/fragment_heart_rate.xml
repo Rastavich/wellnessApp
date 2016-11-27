@@ -4,22 +4,30 @@
              android:layout_height="match_parent"
              tools:context="com.bignerdranch.android.wellnessapp.HeartRateFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/sensor_data"
+        android:text="Place finger on sensor"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="160dp" />
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="384dp"
+        android:layout_height="400dp"
         android:layout_gravity="bottom"
         android:id="@+id/fragment_finger">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/placeFinger"
-            android:text="Place finger on sensor"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:layout_marginBottom="160dp" />
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="90dp"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
 
     </FrameLayout>
