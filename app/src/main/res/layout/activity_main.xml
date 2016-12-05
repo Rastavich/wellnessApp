@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:layout_gravity="top|start"
-    android:id="@+id/fragment_container">
+    android:layout_gravity="top|start">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -50,16 +49,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <fragment
-            android:name="com.bignerdranch.android.wellnessapp.HeartRateFragment"
-            android:id="@+id/heartRate"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"
-            android:layout_alignParentStart="true"
-            android:layout_width="500dp"
-            tools:layout="@layout/fragment_heart_rate" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/fragment_container">
 
     </LinearLayout>
 </LinearLayout>

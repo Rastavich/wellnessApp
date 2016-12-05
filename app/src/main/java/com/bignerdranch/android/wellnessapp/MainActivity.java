@@ -16,6 +16,8 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.FacebookSdk;
 
+import static android.R.attr.fragment;
+
 public class MainActivity extends FragmentActivity {
     DatabaseHelper myDb;
 
@@ -33,6 +35,7 @@ public class MainActivity extends FragmentActivity {
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
         }
+
 
         final Button logoutButton = (Button) findViewById(R.id.logout_button);
         logoutButton.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +63,8 @@ public class MainActivity extends FragmentActivity {
         //Inflate history fragment
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        HistoryFragment historyFragment = new HistoryFragment();
-        fragmentTransaction.replace(R.id.fragment_container, historyFragment);
+        HistoryFragment fragment = new HistoryFragment();
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
@@ -72,7 +75,7 @@ public class MainActivity extends FragmentActivity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         HeartRateFragment fragment = new HeartRateFragment();
-        fragmentTransaction.add(R.id.fragment_container, fragment);
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
 
