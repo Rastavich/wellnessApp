@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reading_heart_rate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bignerdranch.android.wellnessapp.ReadingHeartRate">
+
+    <ToggleButton
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#FFFFFFFF"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:textColor="#990033"
+        android:textOff="Measure Heart Rate"
+        android:textOn="RAW OFF" />
+
+    <TextView
+        android:id="@+id/tIR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_start"
+        android:textColor="#990033"
+        android:textSize="16dp"
+        android:text="" />
+    <TextView
+        android:id="@+id/tRED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tIR"
+        android:textColor="#990033"
+        android:textSize="14dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tHRM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tRED"
+        android:textColor="#990033"
+        android:textSize="14dp"
+        android:text="" />
+
+</RelativeLayout>

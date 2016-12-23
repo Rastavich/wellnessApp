@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdk-v1.0.0/sdk-v1.0.0.iml" filepath="$PROJECT_DIR$/sdk-v1.0.0/sdk-v1.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssensorextensionsdk-v1.1.6/ssensorextensionsdk-v1.1.6.iml" filepath="$PROJECT_DIR$/ssensorextensionsdk-v1.1.6/ssensorextensionsdk-v1.1.6.iml" />
       <module fileurl="file://$PROJECT_DIR$/wellnessApp.iml" filepath="$PROJECT_DIR$/wellnessApp.iml" />
     </modules>
   </component>
