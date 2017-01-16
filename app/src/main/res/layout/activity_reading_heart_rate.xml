@@ -17,34 +17,68 @@
         android:background="#FFFFFFFF"
         android:shadowDx="0.5"
         android:shadowDy="0.5"
-        android:textColor="#990033"
         android:textOff="Measure Heart Rate"
-        android:textOn="RAW OFF" />
+        android:textOn="Measuring..."
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place your finger on the Sensor on the back of the device"
+        android:visibility="invisible"
+        android:id="@+id/tPlaceFinger"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/btn_start"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonBack"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp" />
 
     <TextView
         android:id="@+id/tIR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_start"
         android:textColor="#990033"
         android:textSize="16dp"
-        android:text="" />
-    <TextView
-        android:id="@+id/tRED"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tIR"
-        android:textColor="#990033"
-        android:textSize="14dp"
-        android:text="" />
+        android:text=""
+        android:textAlignment="center"
+        android:layout_below="@+id/tPlaceFinger"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/tHRM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tRED"
         android:textColor="#990033"
-        android:textSize="14dp"
-        android:text="" />
+        android:textSize="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_above="@+id/buttonBack"
+        android:layout_toEndOf="@+id/tRED"
+        android:layout_marginBottom="109dp" />
+
+    <TextView
+        android:id="@+id/tRED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#990033"
+        android:textSize="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_above="@+id/tHRM"
+        android:layout_toEndOf="@+id/tIR"
+        android:layout_marginBottom="28dp" />
 
 </RelativeLayout>
